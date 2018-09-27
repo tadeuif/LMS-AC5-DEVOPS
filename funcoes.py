@@ -20,3 +20,11 @@ def palmeiras(n):
         print("Palmeiras não tem mundial")
     else:
         print("Palmeiras continua sem mundial")
+
+def funcaodivisaoint(n1,n2):
+    resp = n1//n2
+    return resp
+
+def funcaorestdiv(n1,n2):
+    resp = n1%n2
+    return resp
