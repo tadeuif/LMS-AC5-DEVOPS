@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    {% load static %}
+    {% block head %}
+    <meta charset="utf-8" />
+    <link rel="icon" href="{% static 'Header_logo_impacta.png'%}">
+    <title>{{ title | upper }}</title>
+    {% endblock head %}
+
+    {% block css %}
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'site.css' %}" />
+    <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    {% endblock css %}
+</head>
+    
+<body>
+    {% block header %}
+    <header>
+        <div class="topnav2">
+            <a href="{% url 'homepage' %}"><img src="{% static 'Header_logo_impacta.png'%}"id="logo"></a>
+        </div>
+        
+        <div class="topnav" id="myTopnav">
+
+            <a href="{% url 'noticias' %}" >Noticias</a>
+            <a href="{% url 'disciplina' %}" >Disciplinas</a>
+            <a href="{% url 'detalhedocurso' %}" >Detalhes dos Cursos</a>
+            <a href="{% url 'listadocurso' %}" >Lista de Cursos</a>
+            <a href="{% url 'homepage' %}" >Home Page</a>
+        
+        </div>
+
+        <div class="topnav3">
+            GRADIENTE BY TIBA CAMINHONEIRO
+        </div>
+    </header>  
+    <br>
+    {% endblock header %}
+
+    {% block h1 %}
+    <h1>Home page - Faculdade Impacta</h1>
+    {% endblock h1 %}
+    <br>
+    {% block content %}
+    <p>Lorem, Nath, master of office package, ipsum dolor sit amet consectetur adipisicing elit. Deserunt excepturi cumque voluptatem dolorum perspiciatis recusandae possimus, aliquid, officiis voluptas, ipsa eveniet commodi unde vero qui molestiae placeat officia error? Quibusdam!</p>
+    {% endblock content %}
+    {% block footer %}
+    <footer>
+        <p>Criado por: Alunos Nathalia, Tadeu, Tiberio e Vinicius</p>
+    </footer>
+    {% endblock footer %}
+</body>
+</html>
